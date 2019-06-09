@@ -1,4 +1,6 @@
 public abstract class Product {
+    //abstract class, which is common for all goods in shop
+    //it has only name of goods and its price.
     private Enum name;
     private double price;
 
