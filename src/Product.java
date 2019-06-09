@@ -1,19 +1,19 @@
 public abstract class Product {
     //abstract class, which is common for all goods in shop
     //it has only name of goods and its price.
-    private Enum name;
+    private String name;
     private double price;
 
-    public Product(Enum name, double price) {
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public Enum getName() {
+    public String  getName() {
         return name;
     }
 
-    public void setName(Enum name) {
+    public void setName(String name) {
         this.name = name;
     }
 
