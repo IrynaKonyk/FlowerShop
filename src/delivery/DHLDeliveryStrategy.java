@@ -1,6 +1,6 @@
 package delivery;
 
-public class Сourier implements IDelivery {
+public class DHLDeliveryStrategy implements IDeliveryStrategy {
     @Override
     public void getOrder() {
 

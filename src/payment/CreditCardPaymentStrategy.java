@@ -1,6 +1,6 @@
 package payment;
 
-public class ByCardPayment implements IPayment {
+public class CreditCardPaymentStrategy implements IPaymentStrategy {
     @Override
     public void getMoneyFromCustomer() {
 

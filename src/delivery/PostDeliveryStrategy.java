@@ -1,6 +1,6 @@
 package delivery;
 
-public class NewPost implements IDelivery {
+public class PostDeliveryStrategy implements IDeliveryStrategy {
     @Override
     public void getOrder() {
 

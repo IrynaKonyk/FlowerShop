@@ -1,6 +1,6 @@
 package payment;
 
-public interface IPayment {
+public interface IPaymentStrategy {
     public void getMoneyFromCustomer();
     public void sendMoneyToShop();
 }
