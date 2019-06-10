@@ -8,11 +8,15 @@ public class Pot extends Product {
     private ColorEnum color;
     private MaterialEnum potMaterial;
 
-    public Pot(String name, double price, double capacity, ColorEnum color, MaterialEnum potMaterial) {
-        super(name, price);
+    public Pot(String description, double price, double capacity, ColorEnum color, MaterialEnum potMaterial) {
+        super(description, price);
         this.capacity = capacity;
         this.color = color;
         this.potMaterial = potMaterial;
+    }
+    @Override
+    double price() {
+        return getPrice();
     }
 
     public double getCapacity() {
@@ -39,14 +43,17 @@ public class Pot extends Product {
         this.potMaterial = potMaterial;
     }
 
+
     @Override
     public String toString() {
-        return "Product{" +
-                "name=" + getName() +
-                ", price=" + getPrice() +
+        return "Pot{" +
+                "description=" + getDescription() +
+                ", price=" + price() +
                 ", capacity=" + capacity +
                 ", color=" + color +
                 ", potMaterial=" + potMaterial +
                 '}';
     }
+
+
 }
