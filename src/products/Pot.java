@@ -1,3 +1,8 @@
+package products;
+
+import Enums.ColorEnum;
+import Enums.MaterialEnum;
+
 public class Pot extends Product {
     private double capacity;
     private ColorEnum color;
@@ -32,5 +37,16 @@ public class Pot extends Product {
 
     public void setPotMaterial(MaterialEnum potMaterial) {
         this.potMaterial = potMaterial;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name=" + getName() +
+                ", price=" + getPrice() +
+                ", capacity=" + capacity +
+                ", color=" + color +
+                ", potMaterial=" + potMaterial +
+                '}';
     }
 }

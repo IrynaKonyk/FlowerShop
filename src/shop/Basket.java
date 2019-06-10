@@ -1,3 +1,7 @@
+package shop;
+
+import products.Plant;
+
 import java.util.ArrayList;
 import java.util.List;
 

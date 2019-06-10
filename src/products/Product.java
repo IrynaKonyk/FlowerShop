@@ -1,6 +1,7 @@
+package products;
+//abstract class, which is common for all goods in shop
+//it has only name of goods and its price.
 public abstract class Product {
-    //abstract class, which is common for all goods in shop
-    //it has only name of goods and its price.
     private String name;
     private double price;
 
