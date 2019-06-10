@@ -2,14 +2,15 @@ package products;
 
 import Enums.CountryEnum;
 
-public abstract class Plant extends Product {
+public class Plant extends Product {
     private CountryEnum producingCountry;
-    abstract double price();
+
 
     public Plant(String description, double price, CountryEnum producingCountry) {
         super(description, price);
         this.producingCountry = producingCountry;
     }
+
 
     public CountryEnum getProducingCountry() {
         return producingCountry;
@@ -20,10 +21,15 @@ public abstract class Plant extends Product {
     }
 
     @Override
+    double price() {
+        return getPrice();
+    }
+
+    @Override
     public String toString() {
         return "Plant{" +
                 "description=" + getDescription() +
-                ", price=" + getPrice() +
+                ", price=" + price() +
                 ", producingCountry=" + producingCountry +
                 '}';
     }

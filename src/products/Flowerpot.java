@@ -5,7 +5,9 @@ public class Flowerpot extends Product {
     private Pot pot;
 
     public Flowerpot(Plant plant, Pot pot) {
-        super(plant.getName(), plant.getPrice() + pot.getPrice());
+        super();
+        setDescription(plant.getDescription()+"with" +pot.getDescription());
+        setPrice(this.price());
         this.plant = plant;
         this.pot = pot;
     }
@@ -24,6 +26,11 @@ public class Flowerpot extends Product {
 
     public void setPot(Pot pot) {
         this.pot = pot;
+    }
+
+    @Override
+    public double price() {
+        return plant.price() + pot.price();
     }
 
     @Override
