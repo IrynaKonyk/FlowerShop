@@ -2,7 +2,7 @@ package products;
 
 import Enums.CountryEnum;
 
-public class Plant extends Product {
+public abstract class Plant extends Product {
     private CountryEnum producingCountry;
 
 
