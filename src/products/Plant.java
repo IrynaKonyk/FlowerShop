@@ -4,9 +4,10 @@ import Enums.CountryEnum;
 
 public abstract class Plant extends Product {
     private CountryEnum producingCountry;
+    abstract double price();
 
-    public Plant(String name, double price, CountryEnum producingCountry) {
-        super(name, price);
+    public Plant(String description, double price, CountryEnum producingCountry) {
+        super(description, price);
         this.producingCountry = producingCountry;
     }
 
@@ -20,8 +21,8 @@ public abstract class Plant extends Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name=" + getName() +
+        return "Plant{" +
+                "name=" + getDescription() +
                 ", price=" + getPrice() +
                 ", producingCountry=" + producingCountry +
                 '}';
