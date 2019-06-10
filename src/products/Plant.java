@@ -22,7 +22,7 @@ public abstract class Plant extends Product {
     @Override
     public String toString() {
         return "Plant{" +
-                "name=" + getDescription() +
+                "description=" + getDescription() +
                 ", price=" + getPrice() +
                 ", producingCountry=" + producingCountry +
                 '}';
