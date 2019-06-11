@@ -5,9 +5,7 @@ public class Flowerpot extends Product {
     private Pot pot;
 
     public Flowerpot(Plant plant, Pot pot) {
-        super();
-        setDescription(plant.getDescription()+"with" +pot.getDescription());
-        setPrice(this.price());
+        super(plant.getDescription() + "in" + pot.getDescription());
         this.plant = plant;
         this.pot = pot;
     }
@@ -36,7 +34,9 @@ public class Flowerpot extends Product {
     @Override
     public String toString() {
         return "Flowerpot{" +
-                "plant=" + plant +
+                "description=" + getDescription() +
+                ", price=" + price() +
+                ", plant=" + plant +
                 ", pot=" + pot +
                 '}';
     }
