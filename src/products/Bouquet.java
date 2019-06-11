@@ -32,4 +32,10 @@ public class Bouquet extends Product {
 
     }
 
+    @Override
+    public String toString() {
+        return "Bouquet{" +
+                "flowers=" + flowers +
+                '}';
+    }
 }

@@ -4,7 +4,8 @@ package products;
 public abstract class Product {
     private String description;
 
-    public abstract double price();
+    public Product() {
+    }
 
     public Product(String description) {
         this.description = description;
@@ -17,7 +18,7 @@ public abstract class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-
+    public abstract double price();
     @Override
     public String toString() {
         return "Product{" +

@@ -1,14 +1,21 @@
-package products;
+package products.decorator;
+
+import products.Product;
 
 public class PaperDecorator extends ProductDecorator {
+    private Product product;
 
-    public PaperDecorator(String description, Product product) {
-        super(description, product);
+    public PaperDecorator(Product product) {
+        this.product=product;
+    }
+    @Override
+    public String getDescription() {
+        return "Paper Decoration";
     }
 
     @Override
     public double price() {
-        return (4+product.price());
+        return (4 + product.price());
     }
 
     @Override
@@ -18,4 +25,7 @@ public class PaperDecorator extends ProductDecorator {
                 ",product=" + product +
                 '}';
     }
+
+
+
 }

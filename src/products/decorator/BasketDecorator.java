@@ -1,13 +1,20 @@
-package products;
+package products.decorator;
+
+import products.Product;
 
 public class BasketDecorator extends ProductDecorator {
+    private Product product;
 
-    public BasketDecorator(String description, Product product) {
-        super(description, product);
+    public BasketDecorator(Product product) {
+         this.product=product;
+    }
+    @Override
+    public String getDescription() {
+        return "Basket Decoration";
     }
     @Override
     public double price() {
-        return (13+product.price());
+        return (13 + product.price());
     }
 
     @Override
@@ -17,4 +24,6 @@ public class BasketDecorator extends ProductDecorator {
                 ",product=" + product +
                 '}';
     }
+
+
 }

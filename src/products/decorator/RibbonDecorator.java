@@ -1,13 +1,20 @@
-package products;
+package products.decorator;
+
+import products.Product;
 
 public class RibbonDecorator extends ProductDecorator {
-    public RibbonDecorator(String description, Product product) {
-        super(description, product);
+    private Product product;
+    public RibbonDecorator(Product product) {
+        this.product = product;
+    }
+    @Override
+    public String getDescription() {
+        return "Ribbon Decoration";
     }
 
     @Override
     public double price() {
-        return (40+product.price());
+        return (40 + product.price());
     }
 
     @Override
@@ -17,4 +24,6 @@ public class RibbonDecorator extends ProductDecorator {
                 "product=" + product +
                 '}';
     }
+
+
 }
