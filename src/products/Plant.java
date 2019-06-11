@@ -27,6 +27,9 @@ public abstract class Plant extends Product {
     public void setProducingCountry(CountryEnum producingCountry) {
         this.producingCountry = producingCountry;
     }
+    public double price(){
+        return getPrice();
+    }
 
     @Override
     public String toString() {
