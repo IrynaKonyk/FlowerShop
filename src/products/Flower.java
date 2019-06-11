@@ -1,14 +1,24 @@
 package products;
 
-import Enums.CountryEnum;
+import enums.CountryEnum;
 import properties.IProperties;
 
 public class Flower extends Plant {
+    private double price;
     private IProperties properties;
 
     public Flower(String description, double price, CountryEnum producingCountry, IProperties properties) {
         super(description, price, producingCountry);
         this.properties = properties;
+
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public IProperties getProperties() {
@@ -20,7 +30,7 @@ public class Flower extends Plant {
     }
 
     @Override
-    double price() {
+    public double price() {
         return getPrice();
     }
 
