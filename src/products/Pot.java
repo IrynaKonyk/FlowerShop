@@ -1,24 +1,30 @@
 package products;
 
-import Enums.ColorEnum;
-import Enums.MaterialEnum;
+import enums.ColorEnum;
+import enums.MaterialEnum;
 
 public class Pot extends Product {
+    private double price;
     private double capacity;
     private ColorEnum color;
     private MaterialEnum potMaterial;
 
     public Pot(String description, double price, double capacity, ColorEnum color, MaterialEnum potMaterial) {
-        super(description, price);
+        super(description);
+        this.price=price;
         this.capacity = capacity;
         this.color = color;
         this.potMaterial = potMaterial;
     }
-    @Override
-    double price() {
-        return getPrice();
+
+
+    public double getPrice() {
+        return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
     public double getCapacity() {
         return capacity;
     }
@@ -41,6 +47,12 @@ public class Pot extends Product {
 
     public void setPotMaterial(MaterialEnum potMaterial) {
         this.potMaterial = potMaterial;
+    }
+
+
+    @Override
+    public double price() {
+        return getPrice();
     }
 
 
