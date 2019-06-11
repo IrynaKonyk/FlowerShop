@@ -1,5 +1,5 @@
-package Enums;
+package enums;
 
 public enum SizeEnum {
-    SMALL, MIDDLE, BIG
+    SMALL, MEDIUM, BIG
 }
