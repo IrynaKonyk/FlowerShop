@@ -1,13 +1,13 @@
 package properties;
 
-import products.Plant;
+import java.util.Objects;
 
-public class PropertiesForTree implements IProperties{
+public class PropertiesForPalms implements IProperties{
     private double length;
     private int age;
     private boolean hasFruits;
 
-    public PropertiesForTree(double length, int age, boolean hasFruits) {
+    public PropertiesForPalms(double length, int age, boolean hasFruits) {
         this.length = length;
         this.age = age;
         this.hasFruits = hasFruits;
@@ -38,7 +38,17 @@ public class PropertiesForTree implements IProperties{
     }
 
     @Override
-    public boolean equals(Plant plant) {
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PropertiesForPalms that = (PropertiesForPalms) o;
+        return Double.compare(that.length, length) == 0 &&
+                age == that.age &&
+                hasFruits == that.hasFruits;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(length, age, hasFruits);
     }
 }

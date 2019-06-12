@@ -1,18 +1,17 @@
 package delivery;
 
+import products.Product;
+
+import java.util.ArrayList;
+
 public class DHLDeliveryStrategy implements IDeliveryStrategy {
     @Override
-    public void getOrder() {
+    public void deliver(ArrayList<Product> products) {
 
-        System.out.println("DHL Delivery received order from Flower Shop administrator");
-
-    }
-
-    @Override
-    public void deliverOrder() {
-        System.out.println("Consumer received order from DHL Delivery. Order is successfully delivered");
+        System.out.println("Delivered by DHL Delivery");
 
     }
+
 
 
 }

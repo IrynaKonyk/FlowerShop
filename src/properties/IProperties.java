@@ -1,8 +1,6 @@
 package properties;
 
-import products.Plant;
 
-@FunctionalInterface
 public interface IProperties {
-    public boolean equals(Plant plant);
+    public boolean equals(Object o);
 }

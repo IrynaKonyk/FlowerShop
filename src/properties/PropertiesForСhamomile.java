@@ -1,8 +1,7 @@
 package properties;
 
-import Enums.ColorEnum;
-import Enums.SizeEnum;
-import products.Plant;
+import enums.ColorEnum;
+import enums.SizeEnum;
 
 import java.util.Objects;
 
@@ -52,10 +51,15 @@ public class PropertiesForСhamomile implements IProperties  {
     }
 
 
-
     @Override
-    public boolean equals(Plant o) {
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PropertiesForСhamomile that = (PropertiesForСhamomile) o;
+        return Double.compare(that.stemLength, stemLength) == 0 &&
+                numberOfFlowers == that.numberOfFlowers &&
+                color == that.color &&
+                flowerSize == that.flowerSize;
     }
 
     @Override

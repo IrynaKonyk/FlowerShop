@@ -4,7 +4,6 @@ import enums.CountryEnum;
 import properties.IProperties;
 
 public class Flower extends Plant {
-    private double price;
     private IProperties properties;
 
     public Flower(String description, double price, CountryEnum producingCountry, IProperties properties) {
@@ -13,13 +12,6 @@ public class Flower extends Plant {
 
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     public IProperties getProperties() {
         return properties;

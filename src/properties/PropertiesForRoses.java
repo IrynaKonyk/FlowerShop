@@ -1,8 +1,9 @@
 package properties;
 
-import Enums.ColorEnum;
-import Enums.SizeEnum;
-import products.Plant;
+import enums.ColorEnum;
+import enums.SizeEnum;
+
+import java.util.Objects;
 
 public class PropertiesForRoses implements IProperties{
     private ColorEnum color;
@@ -60,8 +61,20 @@ public class PropertiesForRoses implements IProperties{
     }
 
     @Override
-    public boolean equals(Plant plant) {
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PropertiesForRoses that = (PropertiesForRoses) o;
+        return Double.compare(that.stemLength, stemLength) == 0 &&
+                numberOfFlowers == that.numberOfFlowers &&
+                Double.compare(that.thornLength, thornLength) == 0 &&
+                color == that.color &&
+                flowerSize == that.flowerSize;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, flowerSize, stemLength, numberOfFlowers, thornLength);
     }
 
     @Override
