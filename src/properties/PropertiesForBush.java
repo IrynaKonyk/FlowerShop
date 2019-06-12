@@ -42,8 +42,7 @@ public class PropertiesForBush implements IProperties {
 
     @Override
     public String toString() {
-        return "PropertiesForBush{" +
-                "color=" + color +
+        return  "color=" + color +
                 ", flowerSize=" + flowerSize +
                 ", numberOfFlowers=" + numberOfFlowers +
                 '}';

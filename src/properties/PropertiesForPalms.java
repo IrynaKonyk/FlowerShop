@@ -51,4 +51,12 @@ public class PropertiesForPalms implements IProperties{
     public int hashCode() {
         return Objects.hash(length, age, hasFruits);
     }
+
+    @Override
+    public String toString() {
+        return  "length=" + length +
+                ", age=" + age +
+                ", hasFruits=" + hasFruits +
+                '}';
+    }
 }

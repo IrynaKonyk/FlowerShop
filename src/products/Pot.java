@@ -9,8 +9,8 @@ public class Pot extends Product {
     private ColorEnum color;
     private MaterialEnum potMaterial;
 
-    public Pot(String description, double price, double capacity, ColorEnum color, MaterialEnum potMaterial) {
-        super(description);
+    public Pot(String description, int amount, double price, double capacity, ColorEnum color, MaterialEnum potMaterial) {
+        super(description,amount);
         this.price=price;
         this.capacity = capacity;
         this.color = color;
@@ -60,6 +60,7 @@ public class Pot extends Product {
     public String toString() {
         return "Pot{" +
                 "description=" + getDescription() +
+                ", amount="+ getAmount()+
                 ", price=" + price() +
                 ", capacity=" + capacity +
                 ", color=" + color +

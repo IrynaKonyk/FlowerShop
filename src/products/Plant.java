@@ -2,12 +2,12 @@ package products;
 
 import enums.CountryEnum;
 
-public abstract class Plant extends Product {
+public class Plant extends Product {
     private double price;
     private CountryEnum producingCountry;
 
-    public Plant(String description, double price, CountryEnum producingCountry) {
-        super(description);
+    public Plant(String description, int amount, double price, CountryEnum producingCountry) {
+        super(description, amount);
         this.price = price;
         this.producingCountry = producingCountry;
     }
@@ -35,6 +35,7 @@ public abstract class Plant extends Product {
     public String toString() {
         return "Plant{" +
                 "description=" + getDescription() +
+                ", amount="+ getAmount()+
                 ", price=" + price +
                 ", producingCountry=" + producingCountry +
                 '}';

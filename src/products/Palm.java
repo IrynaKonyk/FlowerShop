@@ -6,8 +6,8 @@ import properties.PropertiesForPalms;
 public class Palm extends Plant {
     PropertiesForPalms properties;
 
-    public Palm(String description, double price, CountryEnum producingCountry, PropertiesForPalms properties) {
-        super(description, price, producingCountry);
+    public Palm(String description, int amount, double price, CountryEnum producingCountry, PropertiesForPalms properties) {
+        super(description, amount, price, producingCountry);
         this.properties = properties;
     }
 
@@ -27,7 +27,10 @@ public class Palm extends Plant {
     @Override
     public String toString() {
         return "Palm{" +
-                "properties=" + properties +
+                "description="+ getDescription()+
+                ", price="+ price()+
+                ", amount="+ getAmount()+
+                ", properties=" + properties +
                 '}';
     }
 }

@@ -1,14 +1,22 @@
 package products;
-//abstract class, which is common for all goods in shop
-//it has only description of goods and its method to calculate price.
 public abstract class Product {
     private String description;
+    private int amount;
 
     public Product() {
     }
 
-    public Product(String description) {
+    public Product(String description, int amount) {
         this.description = description;
+        this.amount = amount;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public String getDescription() {
@@ -23,6 +31,7 @@ public abstract class Product {
     public String toString() {
         return "Product{" +
                 "description=" + description +
+                ", amount="+ amount+
                 '}';
     }
 }

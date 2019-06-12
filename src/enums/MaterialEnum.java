@@ -1,5 +1,5 @@
 package enums;
 
 public enum  MaterialEnum {
-    GLASS, WOOD, EARTHEN, METAL
+    GLASS, WOOD, EARTHEN, CERAMIC
 }

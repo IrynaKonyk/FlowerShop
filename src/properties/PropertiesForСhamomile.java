@@ -69,8 +69,7 @@ public class PropertiesForСhamomile implements IProperties  {
 
     @Override
     public String toString() {
-        return "PropertiesForСhamomile{" +
-                "color=" + color +
+        return  "color=" + color +
                 ", flowerSize=" + flowerSize +
                 ", stemLength=" + stemLength +
                 ", numberOfFlowers=" + numberOfFlowers +

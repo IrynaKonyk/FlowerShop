@@ -1,5 +1,5 @@
 package enums;
 
 public enum CountryEnum {
-    UKRAINE, GERMANY, HOLLAND, POLAND
+    UKRAINE, GERMANY, HOLLAND, POLAND, AFRICA
 }

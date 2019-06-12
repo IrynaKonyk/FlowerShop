@@ -6,8 +6,8 @@ import properties.IProperties;
 public class Flower extends Plant {
     private IProperties properties;
 
-    public Flower(String description, double price, CountryEnum producingCountry, IProperties properties) {
-        super(description, price, producingCountry);
+    public Flower(String description, int amount, double price, CountryEnum producingCountry, IProperties properties) {
+        super(description, amount, price, producingCountry);
         this.properties = properties;
 
     }
@@ -30,9 +30,10 @@ public class Flower extends Plant {
     public String toString() {
         return "Flower{" +
                 "description=" + getDescription() +
+                ", amount="+ getAmount()+
                 ", price=" + price() +
                 ", producingCountry=" + getProducingCountry() +
-                ", properties=" + properties +
+                properties +
                 '}';
     }
 }

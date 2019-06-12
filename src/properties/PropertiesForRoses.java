@@ -10,9 +10,9 @@ public class PropertiesForRoses implements IProperties{
     private SizeEnum flowerSize;
     private double stemLength;
     private int numberOfFlowers;
-    private double thornLength;
+    private SizeEnum thornLength;
 
-    public PropertiesForRoses(ColorEnum color, SizeEnum flowerSize, double stemLength, int numberOfFlowers, double thornLength) {
+    public PropertiesForRoses(ColorEnum color, SizeEnum flowerSize, double stemLength, int numberOfFlowers, SizeEnum thornLength) {
         this.color = color;
         this.flowerSize = flowerSize;
         this.stemLength = stemLength;
@@ -52,11 +52,11 @@ public class PropertiesForRoses implements IProperties{
         this.numberOfFlowers = numberOfFlowers;
     }
 
-    public double getThornLength() {
+    public SizeEnum getThornLength() {
         return thornLength;
     }
 
-    public void setThornLength(double thornLength) {
+    public void setThornLength(SizeEnum thornLength) {
         this.thornLength = thornLength;
     }
 
@@ -67,9 +67,9 @@ public class PropertiesForRoses implements IProperties{
         PropertiesForRoses that = (PropertiesForRoses) o;
         return Double.compare(that.stemLength, stemLength) == 0 &&
                 numberOfFlowers == that.numberOfFlowers &&
-                Double.compare(that.thornLength, thornLength) == 0 &&
                 color == that.color &&
-                flowerSize == that.flowerSize;
+                flowerSize == that.flowerSize &&
+                thornLength == that.thornLength;
     }
 
     @Override
@@ -77,10 +77,8 @@ public class PropertiesForRoses implements IProperties{
         return Objects.hash(color, flowerSize, stemLength, numberOfFlowers, thornLength);
     }
 
-    @Override
     public String toString() {
-        return "PropertiesForRoses{" +
-                "color=" + color +
+        return  "color=" + color +
                 ", flowerSize=" + flowerSize +
                 ", stemLength=" + stemLength +
                 ", numberOfFlowers=" + numberOfFlowers +

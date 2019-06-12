@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Bouquet extends Product {
     private ArrayList<Flower> flowers;
 
-    public Bouquet(String description, ArrayList<Flower> flowers) {
-        super(description);
+    public Bouquet(String description, int amount, ArrayList<Flower> flowers) {
+        super(description,amount);
         this.flowers = flowers;
     }
 
@@ -35,6 +35,7 @@ public class Bouquet extends Product {
     @Override
     public String toString() {
         return "Bouquet{" +
+                "amount="+ getAmount()+
                 "flowers=" + flowers +
                 '}';
     }
